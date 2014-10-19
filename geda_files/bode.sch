@@ -238,8 +238,6 @@ footprint=SO8
 }
 T 6000 4100 9 10 1 0 0 0 1
 max gain = 5
-T 14100 4600 9 10 1 0 0 0 1
-use uC comparator
 C 4800 3800 1 0 0 capacitor-variable-1.sym
 {
 T 5000 4500 5 10 0 0 0 0 1
@@ -260,9 +258,28 @@ device=VARIABLE_RESISTOR
 T 5400 4800 5 10 1 1 0 0 1
 refdes=R2
 }
-T 8100 6800 9 10 1 0 0 0 2
-U1-3: MAX44252
-U4: uC internal comparator
 N 7100 5900 7100 6700 4
 N 7100 6700 13800 6700 4
 N 13800 6700 13800 5900 4
+T 11400 7900 9 10 1 0 0 0 1
+V_IO = 3.3V
+T 11200 7600 9 10 1 0 0 0 1
+V_DUT = 9V max
+T 6700 9400 9 10 1 0 0 0 3
+1/2^12 =  0.224mV
+1/2^10 = 0.977mV
+1/2^8 = 3.91mV
+T 13500 4200 9 10 1 0 0 0 1
+manual offset voltage here?
+T 6700 1300 9 10 1 0 0 0 11
+Specs: U1, U2 (MAX9613)
+Sr = 1.3V/us
+Vos = 23 - 100uV
+Vos drift = 7uV/C
+Ib = 1.55pA
+Vol = 11mV
+Voh = 11mV
+Vcm = -0.1 - Vcc+0.1
+GBW = 2.8MHz
+Vcc = 1.8-5.5V
+
