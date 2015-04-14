@@ -1,0 +1,6 @@
+REF	J1-2 U1-1 
+I_OUT	J2-2 U1-6 
+Vcc	J1-1 U1-3 
+GND	J2-1 U1-2 
+IN_N	J2-3 R1-2 U1-5 
+IN_P	J1-3 R1-1 U1-4 
