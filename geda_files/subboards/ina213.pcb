@@ -3,14 +3,14 @@
 # To read pcb files, the pcb version (or the git source date) must be >= the file version
 FileVersion[20070407]
 
-PCB["" 50000 40000]
+PCB["" 41000 31000]
 
 Grid[500.0 0 0 0]
-Cursor[22500 4000 0.000000]
+Cursor[29500 15000 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
-DRC[1000 1000 1000 1000 1500 1000]
-Flags("showdrc,nameonpcb,autodrc,uniquename,clearnew,snappin,locknames")
+DRC[600 1000 600 600 1300 700]
+Flags("showdrc,nameonpcb,autodrc,uniquename,clearnew,locknames")
 Groups("1,c:2,s:3:4:5:6:7:8")
 Styles["Signal,1000,3600,2000,1000:Power,2500,6000,3500,1000:Fat,4000,6000,3500,1000:Skinny,600,2402,1181,600"]
 
@@ -788,7 +788,7 @@ Symbol['~' 1200]
 )
 Attribute("PCB::grid::unit" "mil")
 
-Element["" "JUMPER3" "J2" "unknown" 8000 29000 5000 5000 1 100 ""]
+Element["" "JUMPER3" "J1" "unknown" 35500 25500 -11000 -1000 0 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
 	Pin[0 -10000 6000 3000 6600 3800 "2" "2" ""]
@@ -802,95 +802,96 @@ Element["" "JUMPER3" "J2" "unknown" 8000 29000 5000 5000 1 100 ""]
 
 	)
 
-Element["" "0805" "R1" "100" 23500 10000 3150 3150 2 100 ""]
+Element["" "Standard SMT resistor, capacitor etc" "" "0603" 20500 4500 -3150 -3150 0 100 ""]
 (
-	Pad[3543 -393 3543 393 5118 2000 5718 "1" "1" "square"]
-	Pad[-3543 -393 -3543 393 5118 2000 5718 "2" "2" "square"]
-	ElementLine [-393 2755 393 2755 800]
+	Pad[-2559 -492 -2559 492 2952 2000 3552 "1" "1" "square"]
+	Pad[2559 -492 2559 492 2952 2000 3552 "2" "2" "square"]
+
+	)
+
+Element["found" "Standard SMT resistor, capacitor etc" "" "1206" 20500 21000 -3150 -3150 0 100 ""]
+(
+	Pad[-5905 -1181 -5905 1181 5118 2000 5718 "1" "1" "square"]
+	Pad[5905 -1181 5905 1181 5118 2000 5718 "2" "2" "square"]
+	ElementLine [-2362 -3740 2362 -3740 800]
+	ElementLine [-2362 3740 2362 3740 800]
+
+	)
+
+Element["" "0805" "R1" "0.1" 20500 12000 -3000 -3000 0 100 ""]
+(
+	Pad[-3543 -393 -3543 393 5118 2000 5718 "1" "1" "square"]
+	Pad[3543 -393 3543 393 5118 2000 5718 "2" "2" "square"]
 	ElementLine [-393 -2755 393 -2755 800]
+	ElementLine [-393 2755 393 2755 800]
 
 	)
 
-Element["" "MY_SC70_6" "U1" "unknown" 21000 25000 8600 -9400 3 100 ""]
-(
-	Pad[0 -1000 0 1000 1500 3000 2100 "REF" "1" "square,edge2"]
-	Pad[2600 -1000 2600 1000 1500 3000 2100 "GND" "2" "square,edge2"]
-	Pad[5100 -1000 5100 1000 1500 3000 2100 "VCC" "3" "square,edge2"]
-	Pad[5100 -8000 5100 -6000 1500 3000 2100 "IN_P" "4" "square"]
-	Pad[2600 -8000 2600 -6000 1500 3000 2100 "IN_N" "5" "square"]
-	Pad[0 -8000 0 -6000 1500 3400 2100 "OUT" "6" "square"]
-	ElementLine [-1400 -9400 -1400 -4950 1000]
-	ElementLine [-1400 -1950 -1400 2500 1000]
-	ElementLine [-1400 2500 6600 2500 1000]
-	ElementLine [6600 2500 6600 -9400 1000]
-	ElementLine [6600 -9400 -1400 -9400 1000]
-	ElementArc [-1400 -3450 1500 1500 90 180 1000]
-
-	)
-
-Element["" "JUMPER3" "J1" "unknown" 38000 29000 5000 5000 1 100 ""]
-(
-	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
-	Pin[0 -10000 6000 3000 6600 3800 "2" "2" ""]
-	Pin[0 -20000 6000 3000 6600 3800 "3" "3" ""]
-	ElementLine [5000 -25000 5000 5000 1000]
-	ElementLine [-5000 -25000 5000 -25000 1000]
-	ElementLine [-5000 -25000 -5000 5000 1000]
-	ElementLine [-5000 5000 5000 5000 1000]
-	ElementLine [-5000 -5000 5000 -5000 1000]
-	ElementLine [-5000 -5000 -5000 5000 1000]
-
-	)
-
-Element["onsolder" "Standard SMT resistor, capacitor etc" "" "0603" 20941 11000 -3150 3150 0 100 "auto"]
+Element["onsolder" "0603" "C1" "0.1uF" 20500 26000 -9500 3000 0 100 "auto"]
 (
 	Pad[-2559 -492 -2559 492 2952 2000 3552 "1" "1" "onsolder,square"]
 	Pad[2559 -492 2559 492 2952 2000 3552 "2" "2" "onsolder,square"]
 
 	)
 
-Element["onsolder" "Standard SMT resistor, capacitor etc" "" "0805" 22557 18000 -3150 3150 0 100 "auto"]
+Element["onsolder" "MY_SC70_6" "U1" "unknown" 24000 18500 -12500 -4500 0 100 "auto"]
 (
-	Pad[-3543 -393 -3543 393 5118 2000 5718 "1" "1" "onsolder,square"]
-	Pad[3543 -393 3543 393 5118 2000 5718 "2" "2" "onsolder,square"]
-	ElementLine [-393 2755 393 2755 800]
-	ElementLine [-393 -2755 393 -2755 800]
+	Pad[0 -1000 0 1000 1500 3000 2100 "REF" "1" "onsolder,square,edge2"]
+	Pad[-2600 -1000 -2600 1000 1500 3000 2100 "GND" "2" "onsolder,square,edge2"]
+	Pad[-5100 -1000 -5100 1000 1500 3000 2100 "VCC" "3" "onsolder,square,edge2"]
+	Pad[-5100 -8000 -5100 -6000 1500 3000 2100 "IN_P" "4" "onsolder,square"]
+	Pad[-2600 -8000 -2600 -6000 1500 3000 2100 "IN_N" "5" "onsolder,square"]
+	Pad[0 -8000 0 -6000 1500 3400 2100 "OUT" "6" "onsolder,square"]
+	ElementLine [1400 -9400 1400 -4950 1000]
+	ElementLine [1400 -1950 1400 2500 1000]
+	ElementLine [-6600 2500 1400 2500 1000]
+	ElementLine [-6600 -9400 -6600 2500 1000]
+	ElementLine [-6600 -9400 1400 -9400 1000]
+	ElementArc [1400 -3450 1500 1500 270 180 1000]
 
 	)
 
-Element["onsolder" "Standard SMT resistor, capacitor etc" "" "1206" 21595 27500 -3150 3150 0 100 "auto"]
+Element["" "JUMPER3" "J2" "unknown" 5500 25500 6500 -1000 0 100 ""]
 (
-	Pad[-5905 -1181 -5905 1181 5118 2000 5718 "1" "1" "onsolder,square"]
-	Pad[5905 -1181 5905 1181 5118 2000 5718 "2" "2" "onsolder,square"]
-	ElementLine [-2362 3740 2362 3740 800]
-	ElementLine [-2362 -3740 2362 -3740 800]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
+	Pin[0 -10000 6000 3000 6600 3800 "2" "2" ""]
+	Pin[0 -20000 6000 3000 6600 3800 "3" "3" ""]
+	ElementLine [5000 -25000 5000 5000 1000]
+	ElementLine [-5000 -25000 5000 -25000 1000]
+	ElementLine [-5000 -25000 -5000 5000 1000]
+	ElementLine [-5000 5000 5000 5000 1000]
+	ElementLine [-5000 -5000 5000 -5000 1000]
+	ElementLine [-5000 -5000 -5000 5000 1000]
 
 	)
+Rat[21500 11000 1 24043 11607 0  ""]
+Rat[19000 11500 1 16957 11607 0  ""]
 Layer(1 "top")
 (
-	Line[21000 17000 10000 17000 1000 2000 "clearline"]
-	Line[10000 17000 8000 19000 1000 2000 "clearline"]
-	Line[8000 9000 19000 9000 1000 2000 "clearline"]
-	Line[19000 9000 20500 10500 1000 2000 "clearline"]
-	Line[26100 17000 26100 10900 1000 2000 "clearline"]
-	Line[28000 9000 26100 10900 1000 2000 "clearline"]
-	Line[26100 24000 30600 28500 1000 2000 "clearline"]
-	Line[8000 29000 22000 29000 1000 2000 "clearline"]
-	Line[22000 29000 23850 27150 1000 2000 "clearline"]
-	Line[23850 27150 23850 25000 1000 2000 "clearline"]
-	Line[21000 24000 21000 22500 1000 2000 "clearline"]
-	Line[21000 22500 22000 21500 1000 2000 "clearline"]
-	Line[23600 17000 23600 14600 1000 2000 "clearline"]
-	Line[23600 14600 20500 11500 1000 2000 "clearline"]
-	Line[29800 27700 31100 29000 1000 2000 "clearline"]
-	Line[31100 29000 38000 29000 1000 2000 "clearline"]
-	Line[38000 19000 35500 21500 1000 2000 "clearline"]
-	Line[35500 21500 22000 21500 1000 2000 "clearline"]
-	Line[38000 9000 37750 9250 1000 2000 "clearline"]
-	Line[37750 9250 27750 9250 1000 2000 "clearline"]
 )
 Layer(2 "bottom")
 (
+	Line[35500 15500 32000 19000 1000 2000 "clearline"]
+	Line[32000 19000 24000 19000 1000 2000 "clearline"]
+	Line[35500 25500 35000 26000 1000 2000 "clearline"]
+	Line[18900 19500 18900 25100 1000 2000 "clearline"]
+	Line[18900 25100 18500 25500 1000 2000 "clearline"]
+	Line[21400 19500 21400 23900 1000 2000 "clearline"]
+	Line[21400 23900 22500 25000 1000 2000 "clearline"]
+	Line[23059 25508 23067 25500 1000 2000 "clearline"]
+	Line[23067 25500 35500 25500 1000 2000 "clearline"]
+	Line[17941 25508 17933 25500 1000 2000 "clearline"]
+	Line[17933 25500 5000 25500 1000 2000 "clearline"]
+	Line[5500 15500 6000 15000 1000 2000 "clearline"]
+	Line[6000 15000 23000 15000 1000 2000 "clearline"]
+	Line[23000 15000 24000 14000 1000 2000 "clearline"]
+	Line[24000 14000 24000 12500 1000 2000 "clearline"]
+	Line[35500 5500 23500 5500 1000 2000 "clearline"]
+	Line[23500 5500 21500 7500 1000 2000 "clearline"]
+	Line[21500 7500 21500 11000 1000 2000 "clearline"]
+	Line[5500 5500 16500 5500 1000 2000 "clearline"]
+	Line[16500 5500 19000 8000 1000 2000 "clearline"]
+	Line[19000 8000 19000 11500 1000 2000 "clearline"]
 )
 Layer(3 "signal2")
 (
@@ -920,7 +921,8 @@ NetList()
 (
 	Net("GND" "(unknown)")
 	(
-		Connect("J2-1")
+		Connect("C1-2")
+		Connect("J1-1")
 		Connect("U1-2")
 	)
 	Net("I_OUT" "(unknown)")
@@ -930,13 +932,13 @@ NetList()
 	)
 	Net("IN_N" "(unknown)")
 	(
-		Connect("J2-3")
+		Connect("J1-3")
 		Connect("R1-2")
 		Connect("U1-5")
 	)
 	Net("IN_P" "(unknown)")
 	(
-		Connect("J1-3")
+		Connect("J2-3")
 		Connect("R1-1")
 		Connect("U1-4")
 	)
@@ -947,7 +949,8 @@ NetList()
 	)
 	Net("Vcc" "(unknown)")
 	(
-		Connect("J1-1")
+		Connect("C1-1")
+		Connect("J2-1")
 		Connect("U1-3")
 	)
 )
