@@ -6,11 +6,11 @@ FileVersion[20070407]
 PCB["" 41000 31000]
 
 Grid[500.0 0 0 0]
-Cursor[29500 15000 0.000000]
+Cursor[20500 20000 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[600 1000 600 600 1300 700]
-Flags("showdrc,nameonpcb,autodrc,uniquename,clearnew,locknames")
+Flags("showdrc,nameonpcb,uniquename,clearnew,snappin,locknames")
 Groups("1,c:2,s:3:4:5:6:7:8")
 Styles["Signal,1000,3600,2000,1000:Power,2500,6000,3500,1000:Fat,4000,6000,3500,1000:Skinny,600,2402,1181,600"]
 
@@ -802,23 +802,7 @@ Element["" "JUMPER3" "J1" "unknown" 35500 25500 -11000 -1000 0 100 ""]
 
 	)
 
-Element["" "Standard SMT resistor, capacitor etc" "" "0603" 20500 4500 -3150 -3150 0 100 ""]
-(
-	Pad[-2559 -492 -2559 492 2952 2000 3552 "1" "1" "square"]
-	Pad[2559 -492 2559 492 2952 2000 3552 "2" "2" "square"]
-
-	)
-
-Element["found" "Standard SMT resistor, capacitor etc" "" "1206" 20500 21000 -3150 -3150 0 100 ""]
-(
-	Pad[-5905 -1181 -5905 1181 5118 2000 5718 "1" "1" "square"]
-	Pad[5905 -1181 5905 1181 5118 2000 5718 "2" "2" "square"]
-	ElementLine [-2362 -3740 2362 -3740 800]
-	ElementLine [-2362 3740 2362 3740 800]
-
-	)
-
-Element["" "0805" "R1" "0.1" 20500 12000 -3000 -3000 0 100 ""]
+Element["" "0805" "R1" "0.1" 20500 10500 -3000 -3000 0 100 ""]
 (
 	Pad[-3543 -393 -3543 393 5118 2000 5718 "1" "1" "square"]
 	Pad[3543 -393 3543 393 5118 2000 5718 "2" "2" "square"]
@@ -864,10 +848,18 @@ Element["" "JUMPER3" "J2" "unknown" 5500 25500 6500 -1000 0 100 ""]
 	ElementLine [-5000 -5000 -5000 5000 1000]
 
 	)
-Rat[21500 11000 1 24043 11607 0  ""]
-Rat[19000 11500 1 16957 11607 0  ""]
 Layer(1 "top")
 (
+	Line[5500 5500 7500 3500 1000 2000 "clearline"]
+	Line[7500 3500 17941 3500 1000 2000 "clearline"]
+	Line[17941 3500 17941 9559 1000 2000 "clearline"]
+	Line[17941 9559 14595 12905 1000 2000 "clearline"]
+	Line[14595 12905 14595 20000 1000 2000 "clearline"]
+	Line[35500 5500 33500 3500 1000 2000 "clearline"]
+	Line[33500 3500 23059 3500 1000 2000 "clearline"]
+	Line[23059 3500 23059 9059 1000 2000 "clearline"]
+	Line[23059 9059 26405 12405 1000 2000 "clearline"]
+	Line[26405 12405 26405 20000 1000 2000 "clearline"]
 )
 Layer(2 "bottom")
 (
