@@ -3,6 +3,8 @@ C 500 1100 1 0 0 AD8276.sym
 {
 T 3195 3195 5 10 1 1 0 0 1
 refdes=U1
+T 500 1100 5 10 0 0 0 0 1
+footprint=SO8M
 }
 C 5200 500 1 0 1 opamp-1.sym
 {
@@ -39,6 +41,8 @@ T 5400 1500 5 10 0 0 90 0 1
 device=RESISTOR
 T 6000 2000 5 10 1 1 180 0 1
 refdes=R1
+T 5800 1200 5 10 0 0 0 0 1
+footprint=0603
 }
 N 5200 1100 5700 1100 4
 N 5700 900 5700 1200 4
@@ -48,10 +52,12 @@ netname=I_SRC
 }
 C 5200 2300 1 0 0 npn-1.sym
 {
-T 5800 2800 5 10 0 0 0 0 1
-device=NPN_TRANSISTOR
+T 5800 3100 5 10 1 1 0 0 1
+device=2N3904
 T 5800 2800 5 10 1 1 0 0 1
 refdes=Q1
+T 5200 2300 5 10 0 0 0 0 1
+footprint=TO92
 }
 N 5700 2300 5700 2100 4
 C 5500 3400 1 0 0 5V-plus-1.sym
