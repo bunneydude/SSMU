@@ -1,0 +1,16 @@
+Vin x---L---x---x---x Vout
+            |   |
+            R   C
+            |   |
+            -----
+            |
+            G
+
+L = inductor
+R = resistor
+C = capacitor
+G = ground
+
+Vin is sinusoidal. Tune C until Vout and the current through R are in phase.
+
+Requires 1 programmable voltage source and 1 current sense

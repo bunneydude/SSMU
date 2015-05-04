@@ -1,0 +1,16 @@
+Resistor
+   I-V:
+      Programmable voltage source
+      Current sense
+
+MOSFET
+   Drain current vs drain-source voltage
+      2 programmable voltage sources
+         Set gate-source then sweep drain-source
+      1 current sense
+
+   Drain current vs gate-source
+      1 programmable voltage source
+      1 current sense
+
+
