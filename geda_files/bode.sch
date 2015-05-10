@@ -283,3 +283,5 @@ Vcm = -0.1 - Vcc+0.1
 GBW = 2.8MHz
 Vcc = 1.8-5.5V
 
+T 14700 5000 9 10 1 0 0 0 1
+add negative bias to rail
