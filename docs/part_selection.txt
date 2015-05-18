@@ -1,3 +1,39 @@
+Voltage inverter requirements:
+-Switching frequncy >>40kHz
+-Output current > ?
+
 MAX660 - switched cap voltage converter
-LM7705
-TPS60403DBVR
+http://www.digikey.com/product-detail/en/MAX660MX%2FNOPB/MAX660MX%2FNOPBCT-ND/3527164
+http://www.ti.com/lit/ds/symlink/max660.pdf
+
+8-SOIC
+$1.54
+100mA output current
+Input voltage range = 1.5-5.5V
+Switching frequency = 10kHz or 80kHz
+
+-------------------------
+
+TPS60403DBVR - unregulated charge pump voltage inverter
+http://www.digikey.com/product-detail/en/TPS60403DBVR/296-27005-1-ND/2255295
+http://www.ti.com/lit/ds/symlink/tps60400.pdf
+
+$1.08
+SOT-23-5
+60mA output current
+Input voltage range 1.6-5.5V
+250kHz switching frequency 
+65uA quiescent current   
+
+--------------------------
+
+LM7705 - low noise negative bias generator
+http://www.digikey.com/product-detail/en/LM7705MM%2FNOPB/LM7705MM%2FNOPBCT-ND/3527297
+http://www.ti.com/lit/ds/symlink/lm7705.pdf
+
+$0.70
+-0.232V
+8-TSSOP or 8-MSOP
+92kHz switching frequency
+Output current = 26mA
+Supply voltage = 3-5.25V

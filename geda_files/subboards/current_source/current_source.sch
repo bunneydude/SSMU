@@ -58,6 +58,8 @@ T 5800 2800 5 10 1 1 0 0 1
 refdes=Q1
 T 5200 2300 5 10 0 0 0 0 1
 footprint=TO92
+T 5200 2300 5 10 0 0 0 0 1
+digikey=http://www.digikey.com/product-detail/en/2N3904-AP/2N3904-APCT-ND/950591
 }
 N 5700 2300 5700 2100 4
 C 5500 3400 1 0 0 5V-plus-1.sym
