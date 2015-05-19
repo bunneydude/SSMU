@@ -79,3 +79,5 @@ netname=I_SENSE
 }
 T 5500 600 9 10 1 0 0 0 1
 Current = input voltage / R1
+T 3800 2300 9 10 1 0 0 0 1
++/- 15ma
