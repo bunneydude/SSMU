@@ -50,7 +50,7 @@ device=RESISTOR
 T 5800 1100 5 10 0 0 0 0 1
 footprint=0805
 T 5800 1300 5 10 1 1 0 0 1
-refdes=R?
+refdes=R3
 T 6400 1300 5 10 1 1 0 0 1
 value=40k
 }
@@ -73,7 +73,7 @@ device=RESISTOR
 T 4500 2000 5 10 0 0 0 0 1
 footprint=0805
 T 4500 2200 5 10 1 1 0 0 1
-refdes=R?
+refdes=R4
 T 5100 2200 5 10 1 1 0 0 1
 value=40k
 }
@@ -84,7 +84,7 @@ device=RESISTOR
 T 4500 1500 5 10 0 0 0 0 1
 footprint=0805
 T 4500 1700 5 10 1 1 0 0 1
-refdes=R?
+refdes=R5
 T 5100 1700 5 10 1 1 0 0 1
 value=30k
 }
@@ -95,7 +95,7 @@ device=RESISTOR
 T 4500 1000 5 10 0 0 0 0 1
 footprint=0805
 T 4500 1200 5 10 1 1 0 0 1
-refdes=R?
+refdes=R6
 T 5100 1200 5 10 1 1 0 0 1
 value=20k
 }
@@ -106,7 +106,7 @@ device=RESISTOR
 T 4500 500 5 10 0 0 0 0 1
 footprint=0805
 T 4500 700 5 10 1 1 0 0 1
-refdes=R?
+refdes=R7
 T 5100 700 5 10 1 1 0 0 1
 value=10k
 }
@@ -135,7 +135,7 @@ device=CAPACITOR
 T 3500 5000 5 10 0 0 0 0 1
 symversion=0.1
 T 3900 4400 5 10 1 1 0 0 1
-refdes=C?
+refdes=C1
 T 3800 4100 5 10 1 1 0 0 1
 value=100pF
 }
@@ -146,7 +146,7 @@ device=CAPACITOR
 T 3000 3000 5 10 0 0 90 0 1
 symversion=0.1
 T 4000 3500 5 10 1 1 180 0 1
-refdes=C?
+refdes=C2
 T 4200 3100 5 10 1 1 180 0 1
 value=47pF
 }
@@ -157,7 +157,7 @@ device=RESISTOR
 T 2600 3700 5 10 0 0 0 0 1
 footprint=0805
 T 2600 3900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R2
 T 3200 3900 5 10 1 1 0 0 1
 value=18k
 }
@@ -168,16 +168,16 @@ device=RESISTOR
 T 1500 3700 5 10 0 0 0 0 1
 footprint=0805
 T 1500 3900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R1
 T 2100 3900 5 10 1 1 0 0 1
 value=30k
 }
 N 3700 2700 3700 2800 4
 T 6100 5000 9 10 1 0 0 0 1
 op amp TBD
-T 4600 3800 9 10 1 0 0 0 2
-sallen key 2nd order LP
-fc = ~100kHz
+T 4600 3900 9 10 1 0 0 0 2
+2nd order butterworth LP
+fc = 99.798kHz, Q = 0.706
 T 3800 300 9 10 1 0 0 0 1
 max gain = 5
 T 3800 0 9 10 1 0 0 0 1
@@ -213,3 +213,25 @@ refdes=G10
 N 4500 2100 4300 2100 4
 T 6400 1600 9 10 1 0 0 0 1
 add negative rail IC
+T 300 5000 9 10 1 0 0 0 4
+R1 = mR = 30k
+R2 = R = 18k
+C1 = nC = 100pF
+C2 = C = 47pF
+T 300 4500 9 10 1 0 0 0 2
+m = 1.67
+n = 2.13
+T 1900 5300 9 10 1 0 0 0 2
+2*pi*f = 1/(R*C*sqrt(m*n))
+f = 99.798k
+T 1600 4600 9 10 1 0 0 0 2
+Q = sqrt(m*n) / (m+1)
+Q = 0.706
+T 5900 800 9 10 1 0 0 0 1
+gain = 1 + (R3 / (parallel combination of R4-R7 if grounded))
+T 8900 1100 9 10 1 0 0 0 5
+Resistor grounded  --  gain
+R4 -- 2
+R5 -- 2.33
+R6 -- 3
+R7 -- 5
