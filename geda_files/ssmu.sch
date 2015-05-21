@@ -5,15 +5,17 @@ C 20200 21700 1 0 0 resistor-1.sym
 T 20500 22100 5 10 0 0 0 0 1
 device=RESISTOR
 T 20200 21900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R1
 T 20200 21700 5 10 0 0 0 0 1
 footprint=0805
+T 20200 21700 5 10 0 0 0 0 1
+cost=?
 }
 C 18800 16000 1 0 0 vcc-1.sym
 C 19100 15100 1 0 0 bode.sym
 {
 T 20595 16100 5 10 1 1 0 0 1
-refdes=U?
+refdes=U4
 T 19100 15100 5 10 0 0 0 0 1
 source=bode.sch
 }
@@ -42,6 +44,8 @@ T 8600 25000 5 10 1 1 0 0 1
 refdes=CONN?
 T 8600 24200 5 10 0 0 0 0 1
 footprint=JUMPER2
+T 8600 24200 5 10 0 0 0 0 1
+cost=?
 }
 N 10300 24700 10500 24700 4
 {
@@ -92,25 +96,31 @@ C 14200 12900 1 0 0 npn-1.sym
 T 14800 13400 5 10 0 0 0 0 1
 device=NPN_TRANSISTOR
 T 14800 13400 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q1
+T 14200 12900 5 10 0 0 0 0 1
+cost=?
 }
 C 13700 11100 1 0 1 opamp-1.sym
 {
 T 13000 11900 5 10 0 0 0 6 1
 device=OPAMP
 T 13000 11800 5 10 1 1 0 6 1
-refdes=U?
+refdes=U9
 T 13000 12500 5 10 0 0 0 6 1
 symversion=0.1
+T 13700 11100 5 10 0 0 0 0 1
+cost=?
 }
 C 14800 11800 1 90 0 resistor-1.sym
 {
 T 14400 12100 5 10 0 0 90 0 1
 device=RESISTOR
 T 14500 12200 5 10 1 1 180 0 1
-refdes=R?
+refdes=R3
 T 14800 11800 5 10 0 0 90 0 1
 footprint=0805
+T 14800 11800 5 10 0 0 0 0 1
+cost=?
 }
 N 14700 11800 14700 11600 4
 {
@@ -140,7 +150,9 @@ C 19100 11000 1 90 0 pot-bourns.sym
 T 18200 11800 5 10 0 0 90 0 1
 device=VARIABLE_RESISTOR
 T 19400 11800 5 10 1 1 180 0 1
-refdes=R?
+refdes=R5
+T 19100 11000 5 10 0 0 0 0 1
+cost=?
 }
 C 18900 10500 1 0 0 gnd-1.sym
 C 19000 12100 1 90 0 switch-spst-1.sym
@@ -165,7 +177,9 @@ C 10500 13800 1 0 0 5V-plus-1.sym
 C 9300 11500 1 0 0 AD8276.sym
 {
 T 11995 13595 5 10 1 1 0 0 1
-refdes=U?
+refdes=U8
+T 9300 11500 5 10 0 0 0 0 1
+cost=2.74
 }
 C 13000 12000 1 0 0 5V-plus-1.sym
 N 12500 10600 12500 12000 4
@@ -206,18 +220,20 @@ adj resistor for LCR meter
 C 33800 11000 1 0 0 STM32L100RBT6.sym
 {
 T 34100 23000 5 10 1 1 0 0 1
-refdes=U?
+refdes=U1
 T 36400 23000 5 10 1 1 0 0 1
-device=STM32L100RTB6
+device=STM32L100RBT6
 T 34100 23300 5 10 0 0 0 0 1
 footprint=LQFP64_10
+T 33800 11000 5 10 0 0 0 0 1
+cost=5.84
 }
 T 34200 23500 9 30 1 0 0 0 1
 Microcontroller
 C 19100 13000 1 0 0 bode.sym
 {
 T 20595 14000 5 10 1 1 0 0 1
-refdes=U?
+refdes=U5
 T 19100 13000 5 10 0 0 0 0 1
 source=bode.sch
 }
@@ -261,6 +277,8 @@ T 10400 23300 5 10 0 0 0 0 1
 device=CONNECTOR_4
 T 8600 23800 5 10 1 1 0 0 1
 refdes=USB
+T 8600 22400 5 10 0 0 0 0 1
+cost=?
 }
 C 11900 24100 1 0 0 connector3-1.sym
 {
@@ -268,6 +286,8 @@ T 13700 25000 5 10 0 0 0 0 1
 device=CONNECTOR_3
 T 11900 25200 5 10 1 1 0 0 1
 refdes=SPI
+T 11900 24100 5 10 0 0 0 0 1
+cost=?
 }
 C 11800 22500 1 0 0 connector3-1.sym
 {
@@ -275,14 +295,20 @@ T 13600 23400 5 10 0 0 0 0 1
 device=CONNECTOR_3
 T 11800 23600 5 10 1 1 0 0 1
 refdes=USART
+T 11800 22500 5 10 0 0 0 0 1
+cost=?
 }
 B 8300 22100 5700 4000 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 C 17500 21800 1 0 0 INA213.sym
 {
 T 19095 23195 5 10 1 1 0 0 1
-refdes=U?
+refdes=U6
 T 17695 21800 5 10 1 1 0 0 1
 footprint=MY_SC70_6
+T 17500 21800 5 10 0 0 0 0 1
+cost=1.87
+T 17500 21800 5 10 0 0 0 0 1
+device=INA213AIDCKR
 }
 N 17500 22100 17300 22100 4
 C 16800 22200 1 0 0 gnd-1.sym
@@ -290,21 +316,23 @@ N 16900 22500 17500 22500 4
 N 19600 22100 20100 22100 4
 N 20100 21800 20100 22100 4
 N 21200 22500 19600 22500 4
-C 20200 19200 1 0 0 resistor-1.sym
+C 20300 19200 1 0 0 resistor-1.sym
 {
-T 20500 19600 5 10 0 0 0 0 1
+T 20600 19600 5 10 0 0 0 0 1
 device=RESISTOR
-T 20200 19200 5 10 0 0 0 0 1
+T 20300 19200 5 10 0 0 0 0 1
 footprint=0805
-T 20200 19400 5 10 1 1 0 0 1
-refdes=R?
+T 20300 19400 5 10 1 1 0 0 1
+refdes=R2
+T 20300 19200 5 10 0 0 0 0 1
+cost=?
 }
-N 21100 19300 21600 19300 4
+N 21200 19300 21600 19300 4
 {
 T 21100 19100 5 10 1 1 0 0 1
 netname=I_OUT_2
 }
-N 20200 19300 19700 19300 4
+N 20300 19300 19700 19300 4
 {
 T 20200 19100 5 10 1 1 0 6 1
 netname=I_IN_2
@@ -319,9 +347,13 @@ netname=I_SENSE_2
 C 17500 19300 1 0 0 INA213.sym
 {
 T 19095 20695 5 10 1 1 0 0 1
-refdes=U?
+refdes=U7
 T 17695 19300 5 10 1 1 0 0 1
 footprint=MY_SC70_6
+T 17500 19300 5 10 0 0 0 0 1
+device=INA213AIDCKR
+T 17500 19300 5 10 0 0 0 0 1
+cost=1.87
 }
 N 17500 19600 17300 19600 4
 C 16800 19700 1 0 0 gnd-1.sym
@@ -358,18 +390,22 @@ C 27100 22100 1 90 0 capacitor-1.sym
 T 26400 22300 5 10 0 0 90 0 1
 device=CAPACITOR
 T 27200 22800 5 10 1 1 180 0 1
-refdes=C?
+refdes=C2
 T 26200 22300 5 10 0 0 90 0 1
 symversion=0.1
+T 27100 22100 5 10 0 0 0 0 1
+cost=?
 }
 C 23900 22100 1 90 0 capacitor-1.sym
 {
 T 23200 22300 5 10 0 0 90 0 1
 device=CAPACITOR
 T 23500 22700 5 10 1 1 180 0 1
-refdes=C?
+refdes=C1
 T 23000 22300 5 10 0 0 90 0 1
 symversion=0.1
+T 23900 22100 5 10 0 0 0 0 1
+cost=?
 }
 T 25300 16600 9 30 1 0 0 0 1
 DUT
@@ -408,6 +444,8 @@ T 8500 27200 5 10 1 1 0 0 1
 refdes=CONN?
 T 8500 26400 5 10 0 0 0 0 1
 footprint=JUMPER2
+T 8500 26400 5 10 0 0 0 0 1
+cost=?
 }
 N 10200 26900 10400 26900 4
 {
@@ -427,6 +465,8 @@ T 11700 26400 5 10 0 0 0 0 1
 footprint=JUMPER2
 T 11700 27200 5 10 1 1 0 0 1
 refdes=CONN?
+T 11700 26400 5 10 0 0 0 0 1
+cost=?
 }
 N 13400 26900 13600 26900 4
 {
@@ -513,12 +553,16 @@ netname=DAC_I
 C 7300 18500 1 0 0 sallen_key.sym
 {
 T 8795 20400 5 10 1 1 0 0 1
-refdes=U?
+refdes=U2
+T 7300 18500 5 10 0 0 0 0 1
+source=sallen_key.sch
 }
 C 12200 18400 1 0 0 sallen_key.sym
 {
 T 13695 20300 5 10 1 1 0 0 1
-refdes=U?
+refdes=U3
+T 12200 18400 5 10 0 0 0 0 1
+source=sallen_key.sch
 }
 T 11900 12400 9 10 1 0 0 0 1
 +/- 15mA
