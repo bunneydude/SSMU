@@ -6,7 +6,7 @@ FileVersion[20070407]
 PCB["" 70000 31000]
 
 Grid[500.0 0 0 0]
-Cursor[9000 18500 0.000000]
+Cursor[70000 0 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[600 600 600 1000 1300 700]
@@ -901,21 +901,30 @@ Layer(8 "spare")
 )
 Layer(9 "silk")
 (
-	Text[43500 500 2 90 "MCP41x1 v1.0" "clearline,onsolder"]
-	Text[47000 10000 2 95 "5k" "clearline,onsolder"]
-	Text[22500 10000 2 95 "100k" "clearline,onsolder"]
-	Text[35500 10000 2 95 "10k" "clearline,onsolder"]
+	Text[46000 0 2 90 "MCP41x1 v1.0" "clearline,onsolder"]
+	Text[14000 6500 3 90 "A" "clearline,onsolder"]
+	Text[14000 16500 3 90 "W" "clearline,onsolder"]
+	Text[14000 26500 3 90 "B" "clearline,onsolder"]
+	Text[57500 2000 1 70 "GND" "clearline,onsolder"]
+	Text[47500 1000 1 70 "VCC" "clearline,onsolder"]
+	Text[47500 10000 1 70 "SDI/O" "clearline,onsolder"]
+	Text[47500 23000 1 70 "/CS" "clearline,onsolder"]
+	Text[57500 23000 1 70 "SCK" "clearline,onsolder"]
+	Text[30000 11000 2 95 "5k" "clearline,onsolder"]
+	Text[35500 24000 2 95 "100k" "clearline,onsolder"]
+	Text[32500 17500 2 95 "10k" "clearline,onsolder"]
+	Text[57500 13500 1 70 "NC" "clearline,onsolder"]
 	Polygon("clearpoly")
 	(
-		[47500 17500] [42000 17500] [42000 25000] [47500 25000] 
+		[23500 11500] [16000 11500] [16000 16000] [23500 16000] 
 	)
 	Polygon("clearpoly")
 	(
-		[35000 17500] [29500 17500] [29500 25000] [35000 25000] 
+		[23500 18000] [16000 18000] [16000 22500] [23500 22500] 
 	)
 	Polygon("clearpoly")
 	(
-		[20500 17500] [15000 17500] [15000 25000] [20500 25000] 
+		[23500 24500] [16000 24500] [16000 29000] [23500 29000] 
 	)
 )
 Layer(10 "silk")
