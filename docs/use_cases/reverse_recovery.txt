@@ -1,0 +1,19 @@
+Summary:
+
+A general diode might have a reverse recovery time on the order of nanoseconds.
+The current SSMU's microcontroller has an ADC w/ max 1MSPS sampling rate.
+However, there are fairly cheap ($0.48) diodes with recovery times in the range of 18-20 microseconds.
+
+
+Testing:
+
+Connect the diode such that the cathode is connected to the load resistor. Forward bias the diode. 
+Make sure the load resistor is large enough so you don't blow out the diode.
+Reverse bias the diode and begin capturing the voltage at Vout
+Since Vin/Vout will be from the same microcontroller, we shouldn't have to worry about sync/trigger lines
+
+Vin x ---Diode --- x --- x Vout
+                   |
+                   R
+                   |
+                   G
