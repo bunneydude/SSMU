@@ -1,6 +1,10 @@
 Voltage inverter requirements:
 -Switching frequncy >>40kHz
--Output current > ?
+-Output current > 60mA (based on prices for <60mA)
+
+The MAX660 has better output current but the 80kHz switching frequency might be too close to normal frequencies of interest.
+The TPS60403DBVR is almost the opposite. 60mA might still be enough but I'll need to collect more use cases to be sure.
+
 
 MAX660 - switched cap voltage converter
 http://www.digikey.com/product-detail/en/MAX660MX%2FNOPB/MAX660MX%2FNOPBCT-ND/3527164
@@ -26,6 +30,16 @@ Input voltage range 1.6-5.5V
 65uA quiescent current   
 
 --------------------------
+
+
+
+
+
+
+
+
+-------
+
 
 LM7705 - low noise negative bias generator
 http://www.digikey.com/product-detail/en/LM7705MM%2FNOPB/LM7705MM%2FNOPBCT-ND/3527297
