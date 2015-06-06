@@ -1,0 +1,74 @@
+v 20130925 2
+C 49200 51900 1 0 0 diode-1.sym
+{
+T 49600 52500 5 10 0 0 0 0 1
+device=DIODE
+T 49500 52400 5 10 1 1 0 0 1
+refdes=D1
+T 49200 51900 5 10 0 0 0 0 1
+model-name=DMOD
+}
+C 50800 51100 1 90 0 resistor-1.sym
+{
+T 50400 51400 5 10 0 0 90 0 1
+device=RESISTOR
+T 51100 51900 5 10 1 1 180 0 1
+refdes=R1
+T 50900 51300 5 10 1 1 0 0 1
+value=1k
+}
+N 50100 52100 50700 52100 4
+{
+T 50100 52100 5 10 1 1 0 0 1
+netname=Vout
+}
+N 50700 52100 50700 52000 4
+C 50600 50600 1 0 0 gnd-1.sym
+N 50700 50900 50700 51100 4
+N 48200 52100 49200 52100 4
+{
+T 48800 52100 5 10 1 1 0 6 1
+netname=Vin
+}
+C 47900 50900 1 0 0 vac-1.sym
+{
+T 48600 51550 5 10 1 1 0 0 1
+refdes=VINPUT
+T 48600 51750 5 10 0 0 0 0 1
+device=vac
+T 48600 51950 5 10 0 0 0 0 1
+footprint=none
+T 48600 51350 5 10 1 1 0 0 1
+value=dc 1.6V ac 10MV SIN(0 1MV 1kHZ)
+}
+C 48100 50400 1 0 0 gnd-1.sym
+N 48200 50900 48200 50700 4
+C 50400 52800 1 0 0 spice-model-1.sym
+{
+T 50500 53500 5 10 0 1 0 0 1
+device=model
+T 50500 53400 5 10 1 1 0 0 1
+refdes=A1
+T 51700 53100 5 10 1 1 0 0 1
+model-name=DMOD
+T 50900 52900 5 10 1 1 0 0 1
+file=./diode.mod
+}
+C 50300 53900 1 0 0 spice-include-1.sym
+{
+T 50400 54200 5 10 0 1 0 0 1
+device=include
+T 50400 54300 5 10 1 1 0 0 1
+refdes=A2
+T 50800 54000 5 10 1 1 0 0 1
+file=./Simulation.cmd
+}
+C 50200 54700 1 0 0 spice-directive-1.sym
+{
+T 50300 55000 5 10 0 1 0 0 1
+device=directive
+T 50300 55100 5 10 1 1 0 0 1
+refdes=A3
+T 50300 54800 5 10 1 1 0 0 1
+value=.options TEMP=25
+}
