@@ -31,7 +31,7 @@ symversion=0.1
 T 6400 2600 5 10 1 1 0 0 1
 refdes=U1
 T 5700 1900 5 10 0 0 0 0 1
-cost=?
+cost=0.8
 }
 C 5800 1100 1 0 0 resistor-1.sym
 {
