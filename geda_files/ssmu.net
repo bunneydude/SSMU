@@ -1,14 +1,56 @@
-unnamed_net13	R?-1 D?-2 
-H1/unnamed_net12	H1/U4-5 H1/U4-2 H1/R5-1 
-H1/unnamed_net11	H1/U5-2 H1/R6-2 H1/R5-2 
-H1/unnamed_net10	H1/U3-1 H1/U2-5 H1/R4-2 
-H1/unnamed_net8	H1/R1-1 H1/U1-5 H1/U1-2 
-H1/unnamed_net7	H1/U2-1 H1/R1-2 H1/R3-2 
-H1/unnamed_net6	H1/R4-1 H1/U2-2 H1/R2-2 
-H1/unnamed_net4	H1/U3-5 H1/D1-1 
-unnamed_net3	H1/U5-5 J2-2 
-unnamed_net2	H1/U4-1 H1/U3-2 H1/C1-2 H1/D1-2 J2-1 
-unnamed_net1	H1/U5-1 H1/U1-1 J1-2 
-GND	H1/U2-4 H1/U1-4 H1/R3-1 H1/R2-1 H1/U3-4 H1/U5-4 H1/R6-1 H1/U4-4 H1/C1-1 R?-2 
-+3.3V	H1/U5-3 H1/U4-3 H1/U3-3 J1-1 
-Vcc	H1/U2-3 H1/U1-3 D?-1 
+RSET_3	R9-1 
+RSET_2	R8-1 
+RSET_1	R7-1 
+unnamed_net43	U11-4 R5-2 
+unnamed_net42	U11-3 D1-2 
+unnamed_net41	R6-1 D1-1 
+U5/unnamed_net40	U5/U2-1 U5/C2-1 U5/R6-2 U5/R5-1 
+U5/unnamed_net38	U5/SCK-1 U5/U1-7 
+U5/unnamed_net37	U5/SI-1 U5/U1-6 
+U5/unnamed_net36	U5/U2-5 U5/U2-2 U5/U1-3 
+U5/unnamed_net35	U5//CS-1 U5/U1-5 
+U5/unnamed_net33	U5/S1-1 U5/U1-2 
+U5/unnamed_net32	U5/S1-3 U5/C1-2 U5/R4-2 U5/R3-1 
+U5/unnamed_net30	U5/S1-2 U5/R1-2 U5/C1-1 U5/R2-2 
+AC_1	U5/R5-2 
+U4/unnamed_net28	U4/U2-1 U4/C2-1 U4/R6-2 U4/R5-1 
+U4/unnamed_net26	U4/SCK-1 U4/U1-7 
+U4/unnamed_net25	U4/SI-1 U4/U1-6 
+U4/unnamed_net24	U4/U2-5 U4/U2-2 U4/U1-3 
+U4/unnamed_net23	U4//CS-1 U4/U1-5 
+U4/unnamed_net21	U4/S1-1 U4/U1-2 
+U4/unnamed_net20	U4/S1-3 U4/C1-2 U4/R4-2 U4/R3-1 
+U4/unnamed_net18	U4/S1-2 U4/R1-2 U4/C1-1 U4/R2-2 
+AC_0	U4/R5-2 
+U2/unnamed_net16	U2/R1-2 U2/R2-1 U2/C1-1 
+U2/unnamed_net14	U2/R4-2 U2/R3-1 U2/U1-2 
+U2/unnamed_net13	U2/R2-2 U2/C2-2 U2/U1-1 
+U3/unnamed_net10	U3/R1-2 U3/R2-1 U3/C1-1 
+U3/unnamed_net8	U3/R4-2 U3/R3-1 U3/U1-2 
+U3/unnamed_net7	U3/R2-2 U3/C2-2 U3/U1-1 
+AMP_OFFSET	U5/R2-1 U4/R2-1 R4-2 U10-3 U10-1 U2/R4-1 U3/R4-1 
+V_SRC_2	U3/C1-2 U3/R3-2 U3/U1-5 
+V_SRC_1	U2/C1-2 U2/R3-2 U2/U1-5 J1-1 
+unnamed_net4	J2-1 
++3.3V	U5/U2-3 U5/U1-8 U5/R3-2 U4/U2-3 U4/U1-8 U4/R3-2 U12-3 C2-2 
+I_SENSE_2	U7-6 
+I_IN_2	CONN2-1 U7-4 R2-1 
+I_OUT_2	CONN2-2 U7-5 R2-2 
+Vcc	U7-3 U6-3 
+V_USB	U11-5 R5-1 R6-2 USB-1 
+DAC_V	U2/R1-1 U1-20 
+ADC_1	U5/U1-1 U1-17 
+ADC_0	U4/U1-1 U1-16 
+I_SENSE_1	U6-6 U1-15 
+DAC_I	U3/R1-1 U8-3 
+GND	U11-2 U5/U2-4 U5/C2-2 U5/R6-1 U5/U1-4 U5/R4-1 U4/U2-4 U4/C2-2 U4/R6-1 U4/U1-4 U4/R4-1 U10-2 U2/C2-1 U3/C2-1 C1-1 U12-1 C2-1 U7-2 U6-2 USB-4 U8-2 
+unnamed_net3	R8-2 R7-2 R9-2 S1-1 
+unnamed_net2	U8-5 U8-6 R3-2 
+-5V	U2/U1-4 U3/U1-4 U8-4 U9-4 
++5V	U11-1 R4-1 U2/U1-3 U3/U1-3 U12-2 C1-2 U8-7 U9-3 
+unnamed_net1	U8-1 U9-5 U9-2 
+I_SRC	R3-1 U9-1 
+DUT_IN	U4/R1-1 J1-2 CONN3-1 
+DUT_OUT	U5/R1-1 J2-2 S1-2 CONN3-2 
+I_IN_1	CONN1-1 U6-4 R1-1 
+I_OUT_1	CONN1-2 U6-5 R1-2 
