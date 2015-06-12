@@ -1,0 +1,5 @@
+Might only need 1 or 2 fixed gains. DAC can output 0-3.6V and currently the max voltage range for a DUT is +/-5V. I could do a fixed gain of about 3x and just scale the DAC output appropriately.
+
+Effective resolution if using a fixed gain stage calculated by the 'calc.rb' script.
+
+MCP6S21 and MCP6S91 are cheap ($1-1.30) PGAs. Trade off here might be cost (fixed gain cheaper) with effective resolution (better w/ multiple possible gains)
