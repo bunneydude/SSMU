@@ -1,21 +1,21 @@
-refdes	value	device	cost	
-U2	unknown	OPAMP	1.50	
-C2	10uF	CAPACITOR	0.10	
-R6	100k	RESISTOR	0.10	
-R5	100k	RESISTOR	0.10	
-AC_OFFSET	unknown	INPUT	unknown	
-S1	unknown	SPDT	0.45	
-/CS	unknown	INPUT	unknown	
-SI	unknown	INPUT	unknown	
-SCK	unknown	INPUT	unknown	
-V_OUT	unknown	OUTPUT	unknown	
-U1	unknown	unknown	1.32	
-C1	10uF	CAPACITOR	0.10	
-R4	100k	RESISTOR	0.10	
-R3	100k	RESISTOR	0.10	
-V_P	unknown	INPUT	unknown	
-OFFSET	unknown	INPUT	unknown	
-R1	700k	RESISTOR	0.10	
-R2	300k	RESISTOR	0.10	
-GND	unknown	INPUT	unknown	
-V_IN	unknown	INPUT	unknown	
+refdes	value	device	cost	unit	
+U2	unknown	OPAMP	1.50	unknown	
+C2	10uF	CAPACITOR	0.10	unknown	
+R6	100k	RESISTOR	0.10	unknown	
+R5	100k	RESISTOR	0.10	unknown	
+AC_OFFSET	unknown	INPUT	unknown	unknown	
+S1	unknown	SPDT	0.45	unknown	
+/CS	unknown	INPUT	unknown	unknown	
+SI	unknown	INPUT	unknown	unknown	
+SCK	unknown	INPUT	unknown	unknown	
+V_OUT	unknown	OUTPUT	unknown	unknown	
+U1	unknown	unknown	1.32	unknown	
+C1	10uF	CAPACITOR	0.10	unknown	
+R4	100k	RESISTOR	0.10	unknown	
+R3	100k	RESISTOR	0.10	unknown	
+V_P	unknown	INPUT	unknown	unknown	
+OFFSET	unknown	INPUT	unknown	unknown	
+R1	700k	RESISTOR	0.10	unknown	
+R2	300k	RESISTOR	0.10	unknown	
+GND	unknown	INPUT	unknown	unknown	
+V_IN	unknown	INPUT	unknown	unknown	

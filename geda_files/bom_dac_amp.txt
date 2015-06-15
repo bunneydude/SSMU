@@ -1,14 +1,14 @@
-refdes	value	device	cost	
-V_N	unknown	INPUT	unknown	
-V_P	unknown	INPUT	unknown	
-OFFSET	unknown	INPUT	unknown	
-R1	30k	RESISTOR	0.10	
-R2	18k	RESISTOR	0.10	
-C2	47pF	CAPACITOR	0.10	
-C1	100pF	CAPACITOR	0.10	
-R4	20k	RESISTOR	0.10	
-R3	40k	RESISTOR	0.10	
-U1	unknown	OPAMP	0.8	
-GND	unknown	INPUT	unknown	
-V_OUT	unknown	OUTPUT	unknown	
-V_IN	unknown	INPUT	unknown	
+refdes	value	device	cost	unit	
+V_N	unknown	INPUT	unknown	unknown	
+V_P	unknown	INPUT	unknown	unknown	
+OFFSET	unknown	INPUT	unknown	unknown	
+R1	30k	RESISTOR	0.10	unknown	
+R2	18k	RESISTOR	0.10	unknown	
+C2	47pF	CAPACITOR	0.10	unknown	
+C1	100pF	CAPACITOR	0.10	unknown	
+R4	20k	RESISTOR	0.10	unknown	
+R3	40k	RESISTOR	0.10	unknown	
+U1	unknown	OPAMP	0.8	unknown	
+GND	unknown	INPUT	unknown	unknown	
+V_OUT	unknown	OUTPUT	unknown	unknown	
+V_IN	unknown	INPUT	unknown	unknown	
