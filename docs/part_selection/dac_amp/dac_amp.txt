@@ -1,5 +1,81 @@
 Might only need 1 or 2 fixed gains. DAC can output 0-3.6V and currently the max voltage range for a DUT is +/-5V. I could do a fixed gain of about 3x and just scale the DAC output appropriately.
 
-Effective resolution if using a fixed gain stage calculated by the 'calc.rb' script.
 
 MCP6S21 and MCP6S91 are cheap ($1-1.30) PGAs. Trade off here might be cost (fixed gain cheaper) with effective resolution (better w/ multiple possible gains)
+
+------
+
+Effective resolution if using a fixed gain stage calculated by the 'calc.rb' script.
+ -> Result: fixed gain is fine.
+
+------
+
+Before it looks like I selected the MAX44251 (dual op amp) at $1.85 each. Since it has two op amps I could use one chip for both DAC channels to save money.
+
+Stats (from Digikey summary page):
+   circuits: 2
+   type: rail-to-rail, auto-zero
+   slew rate: 8 V/us
+   GBW: 10MHz
+   Input bias current: 200pA
+   input offset voltage: 3uV
+   supply current: 1.15mA
+   current output: 96mA
+   voltage supply: 2.7-20V, +/- 1.25-10V
+   input cm range: [Vss-0.05, Vdd-1.5]
+   Output low voltage:
+      10k load to Vdd/2: 25mV
+      2k load to Vdd/2: 85mV
+   Output high voltage:
+      10k load to Vdd/2: 37mV
+      2k load to Vdd/2: 135mV
+   Cap loading: 500pF (AV = 1 V/V)
+   footprint: 8-MSOP
+
+Slew rate requirements:
+   Fixed gain stage of 3x means sine wave output will have 5V max amplitude.
+   SR for a sine is 2pi*f*A
+   20kHz, +/- 5V = 0.628V/us
+   100kHz, +/- 5V = 3.14 V/us
+   200kHz, +/- 5V = 6.28 V/us
+   300kHz, +/- 5V = 9.42 V/us
+   400kHz, +/- 5V = 12.6 V/us
+   500kHz, +/- 5V = 15.7 V/us
+
+   A 4V/us will be sufficient
+
+Offset voltage requirements:
+   3.6V / 2^12 = 0.879mV
+   Try for no more than 400uV offset
+
+GBW reqs:
+   3x fixed gain, technically only need audio range (20kHz), plan for 100kHz. 400kHz maximum
+      400kHz * 3 = 1.2MHz
+      100kHz * 3 = 300kHz
+
+----------
+LM833 (http://www.digikey.com/product-detail/en/LM833DT/497-1597-1-ND/592086)
+   circuits: 2
+   type: audio
+   Slew rate: 7V/us
+   GBW: 15MHz
+   current - input bias: 300nA
+   voltage - input offset: 300uV (5mV max :( )
+   current - supply: 4mA
+   voltage - supply: 5V-30V, +/-2.5-15V
+   input cm range: +/- 14V   
+   footprint: 8-SOIC
+
+   -> input offset too high, output high/low too far from rails
+
+---
+TSV992IST (http://www.digikey.com/product-detail/en/TSV992IST/497-5836-1-ND/1506489)
+   circuits: 2
+   type: general, rail-to-rail
+   slew rate: 10V/us
+   GBW: 20MHz
+   input bias current: 1pA
+   input offset voltage: 100uV
+   supply current: 820uA
+   current ouput: 32mA
+   voltage supply is only single, up to 5.5V
