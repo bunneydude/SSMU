@@ -1,0 +1,1 @@
+Require a SPDT analog switch/mux to select between the DC or AC coupled input. Must cost <$1 or else it would be cheaper to use the PGA w/ more inputs

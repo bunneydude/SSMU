@@ -1,4 +1,5 @@
 refdes	value	device	cost	unit	
+U?	unknown	TPS60403DBVR	1.50	power	
 R9	100k	RESISTOR	0.10	adc_amp	
 R8	10k	RESISTOR	0.10	adc_amp	
 R7	1k	RESISTOR	0.10	adc_amp	
