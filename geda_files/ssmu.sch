@@ -759,7 +759,7 @@ refdes=R7
 T 18500 5000 5 10 0 0 0 0 1
 cost=0.10
 T 19200 5200 5 10 1 1 0 0 1
-value=1k
+value=510
 T 18500 5000 5 10 0 0 0 0 1
 unit=adc_amp
 }
@@ -789,7 +789,7 @@ refdes=R9
 T 18500 4000 5 10 0 0 0 0 1
 cost=0.10
 T 19200 4200 5 10 1 1 0 0 1
-value=100k
+value=510k
 T 18500 4000 5 10 0 0 0 0 1
 unit=adc_amp
 }
@@ -844,3 +844,10 @@ cost=1.50
 T 21200 20700 5 10 0 0 0 0 1
 unit=power
 }
+T 19900 4700 9 10 1 0 0 0 1
+max current is 6mA
+T 20000 4000 9 10 1 0 0 0 2
+DUT resistance range is [56, 4.5M] to keep ratio in [0.1, 0.9]
+Though I doubt there will be great accuracy >1M
+T 19900 5000 9 10 1 0 0 0 1
++/-0.5% possible for $0.10 each
