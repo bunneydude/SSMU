@@ -34,6 +34,8 @@ T 2600 3700 5 10 0 0 0 0 1
 unit=adc_amp
 T 2600 3700 5 10 0 0 0 0 1
 digikey=http://www.digikey.com/product-detail/en/RR1220P-3013-D-M/RR12P301KDCT-ND/1288269
+T 2600 3700 5 10 1 1 0 0 1
+tolerance=0.5%
 }
 C 1200 4700 1 0 0 resistor-1.sym
 {
@@ -49,6 +51,8 @@ T 1200 4700 5 10 0 0 0 0 1
 cost=0.11
 T 1200 4700 5 10 0 0 0 0 1
 unit=adc_amp
+T 1200 4700 5 10 1 1 0 0 1
+tolerance=0.5%
 }
 C 1500 3600 1 0 0 in-1.sym
 {
@@ -84,6 +88,8 @@ T 4500 3000 5 10 0 0 0 0 1
 unit=adc_amp
 T 4500 3000 5 10 0 0 0 0 1
 digikey=http://www.digikey.com/product-detail/en/1614883-1/A106042CT-ND/3477677
+T 4500 3000 5 10 1 1 0 0 1
+tolerance=0.1%
 }
 C 4500 1700 1 90 0 resistor-1.sym
 {
@@ -101,6 +107,8 @@ T 4500 1700 5 10 0 0 0 0 1
 unit=adc_amp
 T 4500 1700 5 10 0 0 0 0 1
 digikey=http://www.digikey.com/product-detail/en/1614883-1/A106042CT-ND/3477677
+T 4500 1700 5 10 1 1 0 0 1
+tolerance=0.1%
 }
 C 3300 2600 1 0 0 capacitor-1.sym
 {
@@ -212,6 +220,8 @@ T 8600 1600 5 10 0 0 0 0 1
 unit=adc_amp
 T 8600 1600 5 10 0 0 0 0 1
 digikey=http://www.digikey.com/product-detail/en/1614883-1/A106042CT-ND/3477677
+T 8600 1600 5 10 1 1 0 0 1
+tolerance=0.1%
 }
 C 8600 500 1 90 0 resistor-1.sym
 {
@@ -229,6 +239,8 @@ T 8600 500 5 10 0 0 0 0 1
 unit=adc_amp
 T 8600 500 5 10 0 0 0 0 1
 digikey=http://www.digikey.com/product-detail/en/1614883-1/A106042CT-ND/3477677
+T 8600 500 5 10 1 1 0 0 1
+tolerance=0.1%
 }
 C 8900 0 1 0 0 gnd-1.sym
 N 8500 1400 8500 1600 4
