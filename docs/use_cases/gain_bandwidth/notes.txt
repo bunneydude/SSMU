@@ -1,0 +1,7 @@
+- pick op-amp w/ GBW product in range 40kHz-100kHz
+
+- start w/ unity gain and take a Bode plot measurement
+
+- step through gain though GPIO + resistors
+
+- take new Bode plot measurements for each gain
