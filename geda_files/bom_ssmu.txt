@@ -1,5 +1,5 @@
 refdes	value	device	cost	unit	
-U?	unknown	TPS60403DBVR	1.50	power	
+U?	unknown	unknown	1.50	unknown	
 R9	510k	RESISTOR	0.10	adc_amp	
 R8	10k	RESISTOR	0.10	adc_amp	
 R7	510	RESISTOR	0.10	adc_amp	
@@ -66,7 +66,6 @@ SPI	unknown	CONNECTOR_3	0.0	mech
 USB	unknown	CONNECTOR_4	0.50	mech	
 U1	unknown	STM32L100RBT6	5.84	uc	
 U8	unknown	AD8276	2.74	current_source	
-S1	unknown	SPST	0.50	adc_amp	
 R3	unknown	RESISTOR	0.20	current_source	
 U9	unknown	OPAMP	1.50	current_source	
 CONN3	unknown	CONNECTOR_2	0.0	mech	

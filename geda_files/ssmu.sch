@@ -95,19 +95,7 @@ T 10600 13100 5 10 1 1 0 6 1
 netname=I_IN_1
 }
 N 11600 13300 11600 14000 4
-C 19700 5900 1 90 0 switch-spst-1.sym
-{
-T 19000 6300 5 10 0 0 90 0 1
-device=SPST
-T 20000 6400 5 10 1 1 180 0 1
-refdes=S1
-T 19700 5900 5 10 0 0 0 0 1
-cost=0.50
-T 19700 5900 5 10 0 0 0 0 1
-unit=adc_amp
-}
-N 19700 4100 19700 5900 4
-N 19700 6700 19700 6900 4
+N 19700 4100 19700 6900 4
 C 6800 6400 1 0 0 gnd-1.sym
 C 8200 7300 1 0 0 5V-plus-1.sym
 C 7000 5000 1 0 0 AD8276.sym
@@ -831,19 +819,6 @@ N 17400 18000 17600 18000 4
 T 17600 18000 5 10 1 1 0 0 1
 netname=DUT_OUT
 }
-C 21200 20700 1 0 0 74power-1.sym
-{
-T 21500 21600 5 10 1 1 0 0 1
-refdes=U?
-T 21400 22150 5 10 0 0 0 0 1
-footprint=DIP14
-T 21700 21300 5 10 1 1 0 0 1
-device=TPS60403DBVR
-T 21200 20700 5 10 0 0 0 0 1
-cost=1.50
-T 21200 20700 5 10 0 0 0 0 1
-unit=power
-}
 T 19900 4700 9 10 1 0 0 0 1
 max current is 6mA
 T 20000 4000 9 10 1 0 0 0 2
@@ -851,3 +826,15 @@ DUT resistance range is [56, 4.5M] to keep ratio in [0.1, 0.9]
 Though I doubt there will be great accuracy >1M
 T 19900 5000 9 10 1 0 0 0 1
 +/-0.5% possible for $0.10 each
+C 17700 20400 1 0 0 TPS60403.sym
+{
+T 20145 21245 5 10 1 1 0 6 1
+refdes=U?
+T 17445 20045 5 10 0 1 0 0 1
+footprint=TO92
+T 17695 20395 5 10 0 1 0 0 1
+footprint=MY_SOT25
+T 17700 20400 5 10 0 0 0 0 1
+cost=1.50
+}
+C 17200 21000 1 0 0 5V-plus-1.sym
