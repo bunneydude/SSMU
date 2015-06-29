@@ -1,5 +1,8 @@
 refdes	value	device	cost	unit	
-U?	unknown	unknown	1.50	unknown	
+C5	1uF	CAPACITOR	0.10	power	
+C4	1uF	CAPACITOR	0.10	power	
+C3	1uF	CAPACITOR	0.10	power	
+U13	unknown	unknown	1.08	unknown	
 R9	510k	RESISTOR	0.10	adc_amp	
 R8	10k	RESISTOR	0.10	adc_amp	
 R7	510	RESISTOR	0.10	adc_amp	
