@@ -4,12 +4,11 @@ C2	10uF	CAPACITOR	0.10	adc_amp
 R6	100k	RESISTOR	0.11	adc_amp	
 R5	100k	RESISTOR	0.11	adc_amp	
 AC_OFFSET	unknown	INPUT	unknown	unknown	
-S1	unknown	SPDT	0.45	adc_amp	
 /CS	unknown	INPUT	unknown	unknown	
 SI	unknown	INPUT	unknown	unknown	
 SCK	unknown	INPUT	unknown	unknown	
 V_OUT	unknown	OUTPUT	unknown	unknown	
-U1	unknown	unknown	1.32	adc_amp	
+U1	unknown	unknown	1.21	adc_amp	
 C1	10uF	CAPACITOR	0.10	adc_amp	
 R4	100k	RESISTOR	0.11	adc_amp	
 R3	100k	RESISTOR	0.11	adc_amp	
