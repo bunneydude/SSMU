@@ -9,3 +9,7 @@ However, the slew rate is 0.1V/us. This is too low for supporting a 20kHz signal
 Dual rail requirement seems to be ruling out most of the cheaper chips
 
 http://www.digikey.com/product-detail/en/TA75S558FTE85LF/TA75S558FTE85LFCT-ND/4304037
+
+
+4V/us:
+http://www.digikey.com/product-detail/en/BA4560FJ-GE2/BA4560FJ-GE2CT-ND/4896104
