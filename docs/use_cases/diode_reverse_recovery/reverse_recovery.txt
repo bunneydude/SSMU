@@ -4,6 +4,15 @@ A general diode might have a reverse recovery time on the order of nanoseconds.
 The current SSMU's microcontroller has an ADC w/ max 1MSPS sampling rate.
 However, there are fairly cheap ($0.48) diodes with recovery times in the range of 18-20 microseconds.
 
+Possible parts:
+7.5us, $0.90
+   http://www.digikey.com/product-detail/en/1N5626-TR/1N5626CT-ND/3104365
+
+18us, $0.57
+   http://www.digikey.com/product-detail/en/SARS01/SARS01-ND/4289306
+
+20us, $0.48
+   http://www.digikey.com/product-detail/en/BY448GP-E3%2F54/BY448GP-E3%2F54GICT-ND/2880384
 
 Testing:
 

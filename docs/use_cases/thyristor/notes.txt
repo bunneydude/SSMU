@@ -1,0 +1,2 @@
+possible part (low cost, hold current <50mA)
+http://www.digikey.com/product-detail/en/SDP0080T023G5RP/F5916CT-ND/3911042
