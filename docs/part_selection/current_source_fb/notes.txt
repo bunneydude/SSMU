@@ -1,3 +1,12 @@
+
+Vload = Io * Rload
+   stay within input common mode range
+
+
+
+
+-------
+
 Initial part - AD8603
 
 Chosen by the app note for it's offset voltage (12-50uV), input bias current (0.2-1pA), input offset current (0.1-0.5pA).
