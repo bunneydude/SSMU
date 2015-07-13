@@ -128,7 +128,7 @@ footprint=0805
 T 2600 3900 5 10 1 1 0 0 1
 refdes=R2
 T 3200 3900 5 10 1 1 0 0 1
-value=18k
+value=4.7k
 T 2600 3700 5 10 0 0 0 0 1
 cost=0.10
 T 2600 3700 5 10 0 0 0 0 1
@@ -143,7 +143,7 @@ footprint=0805
 T 1500 3900 5 10 1 1 0 0 1
 refdes=R1
 T 2100 3900 5 10 1 1 0 0 1
-value=30k
+value=7.5k
 T 1500 3700 5 10 0 0 0 0 1
 cost=0.10
 T 1500 3700 5 10 0 0 0 0 1
@@ -154,7 +154,7 @@ T 6100 5000 9 10 1 0 0 0 1
 op amp TBD
 T 4600 3900 9 10 1 0 0 0 2
 2nd order butterworth LP
-fc = 99.798kHz, Q = 0.706
+fc = 391013 Hz, Q = 0.710
 C 3700 1100 1 0 0 in-1.sym
 {
 T 3700 1400 5 10 0 0 0 0 1
@@ -163,27 +163,20 @@ T 3700 1200 5 10 1 1 0 7 1
 refdes=OFFSET
 }
 T 300 5000 9 10 1 0 0 0 4
-R1 = mR = 30k
-R2 = R = 18k
-C1 = nC = 100pF
-C2 = C = 47pF
-T 300 4500 9 10 1 0 0 0 2
-m = 1.67
-n = 2.13
-T 1900 5300 9 10 1 0 0 0 2
+R1 = mR
+R2 = R 
+C1 = nC
+C2 = C 
+T 1900 5300 9 10 1 0 0 0 1
 2*pi*f = 1/(R*C*sqrt(m*n))
-f = 99.798k
-T 1600 4600 9 10 1 0 0 0 2
+T 1600 4600 9 10 1 0 0 0 1
 Q = sqrt(m*n) / (m+1)
-Q = 0.706
 T 5700 300 9 10 1 0 0 0 3
 signal gain = 1 + (R3 / R2) = 3
 offset gain = -R3/R2 = -2
 Vout = 3*Vin - 2*Offset
 C 6300 1600 1 0 0 5V-minus-1.sym
 N 6500 1600 6200 1600 4
-T 1500 1900 9 10 1 0 0 0 1
-increase cut off frequency to be closer to 500kHz?
 C 6000 2900 1 0 0 5V-plus-1.sym
 C 600 2200 1 0 0 in-1.sym
 {
