@@ -1,0 +1,169 @@
+
+Vload = Io * Rload
+   stay within input common mode range
+
+Vout = Io*(RL + Rs)
+   stay within diff amp sense pin range
+
+Io*(RL + Rs)
+   stay within diff amp output range
+
+Slew rates
+   diff amp output
+   feedback amp output
+   input buffer amp
+
+Io within diff amp output range
+
+
+----
+
+Slew rates (all calcs done for sine waves)
+   Input buffer amp
+      Vin is 0-3.3V, remove DC bias -> 1.65*sin(2pi*f*t)
+      Sr @ 20kHz = 0.207 V/us
+      Sr @ 100kHz = 1.04 V/us
+      Sr @ 400kHz = 4.15 V/us
+
+   feedback amp
+      At Io=15mA w/ (fairly) max RL of 200 Ohm, VL ranges from 3V to -3V
+      Sr @ 20kHz = 0.377 V/us
+      Sr @ 100kHz = 1.88 V/us
+      Sr @ 400kHz = 7.54 V/us
+
+   diff amp (AD8276 Sr = 1.1V/us)
+      Assuming Rs=100 ohm to prevent overcurrent at Vin=1.65, Vo limits are +/- 4.5V
+      Sr @ 20kHz = 0.565 V/us
+      Sr @ 100kHz = 2.83 V/us
+      Sr @ 400kHz = 11.3 V/us
+
+
+Input offset voltage of the feedback amp adds directly to voltage across Rs. Normally, voltage across Rs (call it Vs) would equal Vin. In reality it will be more like Vin + Vos_diff_amp + Vos_fb_amp. 
+
+If the offset voltages are in the low milivolt range and are low drift, I should be able to compensate by software calibration. At max current (w/ Rs = 100), Vo is 4.5V which leaves about 200-300mV before we reach the output max voltage of the diff amp.
+
+-------
+Feedback amp
+-------
+
+Initial part - AD8603
+
+Chosen by the app note for it's offset voltage (12-50uV), input bias current (0.2-1pA), input offset current (0.1-0.5pA).
+
+However, the slew rate is 0.1V/us. This is too low for supporting a 20kHz signal. Will likely need at least 0.377 V/us (See above)
+
+
+---
+Select feedback + input buffer op amp
+   The cheapest op amp <0.4V/us but >0.2V/us still cost $0.34. Therefore, just use the same op amp for both the input buffer as the feedback amp. There are some decent chips w/ multiple internal amps.
+
+Filters
+   Sr >= 0.4V/us    
+   GBW >= 60kHz
+   in stock
+   packaging w/ min quantity 1 (bulk, CT, tube)
+
+
+First draft parts (based on specs listed on Digikey - will have to determine worst case specs from datasheets):
+
+LM324DT (http://www.digikey.com/product-detail/en/LM324DT/497-1580-1-ND/592078)
+   $0.31
+   4 circuits
+   general purpose
+   Sr = 0.4 V/us
+   GBW = 1.3MHz
+   input bias current = 20nA
+   input offset voltage = 2mV
+   supply = +/-1.5-15V
+   14-soic
+
+TL062 (http://www.digikey.com/product-detail/en/TL062CDT/497-2194-1-ND/599110)
+   $0.33
+   2 circuits
+   J-FET
+   Sr = 3.5V/us
+   GBW = 1MHz
+   input bias current = 30pA
+   input offset voltage = 3mV
+   supply = +/-3-18V
+   8-soic
+
+
+LM2902DT (http://www.digikey.com/product-detail/en/LM2902DT/497-1557-1-ND/592065)
+   $0.34
+   4 circuits
+   general purpose
+   Sr = 0.4V/us
+   GBW = 1.3MHz
+   input bias current = 20nA
+   input offset voltage = 2mV
+   supply = +/- 1.5-15V
+   14-soic  
+
+
+LM324ADT (http://www.digikey.com/product-detail/en/LM324ADT/497-1578-1-ND/592077)
+   $0.36
+   4 circuits
+   general purpose
+   Sr = 0.4V/us
+   GBW = 1.3MHz
+   input bias current = 20nA
+   input offset voltage = 2Mv
+   supply = +/-1.5-15V
+   14-soic
+
+RC4558ID (http://www.digikey.com/product-detail/en/RC4558ID/296-33540-5-ND/1573831)
+   $0.39
+   2 circuits
+   general purpose
+   Sr = 1.7V/us
+   GBW = 3MHz
+   input bias current = 150nA
+   input offset voltage = 0.5mV
+   supply = +/- 5-15V
+   8-soic
+
+LM358PT (http://www.digikey.com/product-detail/en/LM358PT/497-6455-1-ND/1865482)
+   $0.39
+   2 circuits
+   general purpose
+   Sr = 0.6V/us
+   GBW = 1.1MHz
+   input bias current = 20nA
+   input offset voltage = 2mV
+   supply = +/- 1.5-15V
+   8-tssop
+
+LM358ST (http://www.digikey.com/product-detail/en/LM358ST/497-6456-1-ND/1865499)
+   $0.39
+   2 circuits
+   general purpose
+   Sr = 0.6V/us
+   GBW = 1.1MHz
+   input bias current = 20nA
+   input offset voltage = 2mV
+   supply = +/- 1.5-15V
+   8-tssop
+
+
+
+
+TA75S558 (http://www.digikey.com/product-detail/en/TA75S558FTE85LF/TA75S558FTE85LFCT-ND/4304037)
+   $0.54
+   1 circuit
+   general purpose
+   Sr = 1 V/us
+   GBW = 3MHz
+   input bias current = 60nA
+   input offset voltage = 0.5mV
+   supply = +/-4-18V
+   SOT-753
+
+---
+
+Dual rail requirement seems to be ruling out most of the cheaper chips
+
+
+
+4V/us:
+http://www.digikey.com/product-detail/en/BA4560FJ-GE2/BA4560FJ-GE2CT-ND/4896104
